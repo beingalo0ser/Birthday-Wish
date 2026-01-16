@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wish for My Love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="floating-hearts" id="floatingHearts"></div>
+    <div class="petals" id="petalsContainer"></div>
+    
+    
+    <div class="container">
+        <div class="progress-bar">
+            <div class="progress" id="progressBar"></div>
+        </div>
+
+        <!-- Step 1: Greeting -->
+        <div class="step" id="step1">
+            <h1>Happy Birthday, My Love!</h1>
+            <p>I've created something magical just for you.</p>
+            <p>Are you ready to begin this special journey?</p>
+            <img src="https://png.pngtree.com/png-vector/20250422/ourmid/pngtree-cute-girl-holding-birthday-cake-smiling-cheerfully-png-image_16067658.png" style="height: 200px;width: 200px;" alt="">
+            <button class="btn" onclick="nextStep()">Open Your Gift</button>
+        </div>
+
+        <!-- Step 2: Name Input -->
+        <div class="step" id="step2">
+            <h2>Are You Ready For The Surprise</h2>
+            <p>What's The Name Of The Most Beautiful Birthday Girl In The World?</p>
+            <input type="text" class="name-input" id="nameInput" placeholder="Enter your name">
+            <button class="btn" onclick="saveName()">Continue</button>
+        </div>
+
+        <!-- Step 3: Heart Animation -->
+        <div class="step" id="step3">
+            <h2>For You, <span id="displayName">My Love</span></h2>
+            <p>Click on the Heart❤️ to feel my Love😘 for you!</p>
+            <div class="heart" id="interactiveHeart" onclick="createHearts()"></div>
+            <div id="heartMessage" class="message-box">
+                <p>Every Beat Of My Heart❤️ Whispers Your Name, <span id="heartName">my love</span>.</p>
+            </div>
+            <button class="btn" onclick="nextStep()">Continue to Your Message</button>
+        </div>
+
+        <!-- Step 4: Birthday Message -->
+        <div class="step" id="step4">
+            <h2>My Special Message For You</h2>
+            <div class="photo-frame">
+                <!-- Replace with your image path -->
+                <img src="https://medias.artmajeur.com/standard/17262319_a-cutel-european-girl-full-bodycartoon-style-illustration-drawn-with-posca-markers-pretty-face-586679414-1.jpg?v=1738402496" alt="Beautiful You">
+            </div>
+            <div id="typedMessage" class="message-box">
+                <p class="typing-effect" id="typingText"></p>
+            </div>
+            <button class="btn" onclick="nextStep()">See Your Surprise</button>
+        </div>
+
+        <!-- Step 5: Memory Lane -->
+        <div class="step" id="step5">
+            <h2>🌸💝 𝐅𝐨𝐫 𝐌𝐲 𝐖𝐢𝐟𝐞𝐲 🎀💋♥️</h2>
+            <p>You Walked In And Everything Changed, My Nights Found Stars ♥️🌸 My Heart Found Range 🦋🌸 You Smiled And Storms Turned Soft And Mild. In Your Love I Just Became A Child 🌙💗</p>
+            <div class="memory-container">
+                <div class="polaroid">
+                    <img src="Images/Rapunzel2.jpg">
+                    <div class="polaroid-caption">You're Not Just A Part Of My 'Prayers'🎀♥️</div>
+                </div>
+                <div class="polaroid">
+                    <img src="Images/Rapunzel.jpg">
+                    <div class="polaroid-caption">You're The 'Aameen' Of Every Single One🌸🤍</div>
+                </div>
+               
+            </div>
+            <button class="btn" onclick="nextStep()">Your Final Surprise</button>
+        </div>
+
+        <!-- Step 6: Final Wish -->
+        <div class="step" id="step6">
+            <h1>🎉 Happy Birthday, <span id="finalName">My Love 💖</span>! 🎂</h1>
+        
+            <p>🦋🌼𓍯 جـــانــــ۬ـٞـۧۛـ۬ــاں༉💛</p>
+            <p>To The "Queen👑" Of My "Heart♥️"</p>
+            <p>The "Princess💝"Of My "Dreams😇"</p>
+            <p>The Only "Love🥰" Of My "Life🧸"</p>
+            <p>ᵂᴵˢᴴᴵᴺᴳ ᵞᴼᵁ ᴹᴬᴺᵞ ᴹᴬᴺᵞ ᴴᴬᴾᴾᵞ ᴿᴱᵀᵁᴿᴺˢ ᴼᶠ ᵀᴴᴱ ᴰᴬᵞ ᴵᴺ ᵞᴼᵁᴿ ᴸᴵᶠᴱ.ᴹᴬᵞ ᴬᴸᴸ ᵞᴼᵁᴿ ᴰᴿᴱᴬᴹˢ ᶜᴼᴹᴱ ᵀᴿᵁᴱ.ᴮᴱ ᴱᵛᴱᴺ ᵂᴼᴺᴰᴱᴿᶠᵁᴸ ᴬᴺᴰ ᴮᴸᴱˢˢᴱᴰ.ᴵ ᵂᴵˢᴴ ᵞᴼᵁ ᴴᴬᴾᴾᴵᴺᴱˢˢ ᴼᴺ ᵀᴴᴵˢ ᵂᴼᴺᴰᴱᴿᶠᵁᴸ ᴰᴬᵞ.</p>
+            <p>𝑴𝒆𝒍𝒍𝒊𝒊 𝑴𝒐𝒐𝒐𝑶𝒐𝒐𝒕𝒕𝒕𝒊𝒊𝒊 𝑩𝒉𝒂𝑳𝑼𝒖𝒖 👑🎀🌸🤍😍🥰💋😘</p>
+            <p>🤍 ᵀᴼ ᴹᵞ ᴸᴼᵛᴱ,😍♥️🌎 ᴵ ᴰᴼᴺ'ᵀ ᴷᴺᴼᵂ ᴴᴼᵂ ᴵ ᵂᴵᴸᴸ ᴱˣᴾᴿᴱˢˢ ᴹᵞ ᶠᴱᴱᴸᴵᴺᴳˢ ᵀᴼ ᵞᴼᵁ. ˢᴵᴺᶜᴱ ᴵ ᴬᴹ ᵂᴵᵀᴴ ᵞᴼᵁ, ᴵ ᶠᴵᴺᴰ ᴱᵛᴱᴿᵞᵀᴴᴵᴺᴳ ˢᴼ ᴮᴱᴬᵁᵀᴵᶠᵁᴸ ᴬᴺᴰ ᴺᴱᵂ. ᵞᴼᵁᴿ ᴸᴼᵛᴱ ᴵˢ ˢᴼ ᴾᴬˢˢᴵᴼᴺᴬᵀᴱ ᵀᴴᴬᵀ ᴵᵀ ᴹᴬᴷᴱˢ ᴹᴱ ᶠᴼᴿᴳᴱᵀ ᴬᴸᴸ ᴹᵞ ᴾᴬᴵᴺ. ᵞᴼᵁᴿ ᴸᴼᵛᴱ ᴵˢ ˢᴼ ᴾᵁᴿᴱ ᵀᴴᴬᵀ ᴵᵀ ᵀᴬᴷᴱˢ ᴹᴱ ᵀᴼ ᵀᴴᴱ ᶠᴱᴱᴸᴵᴺᴳ ᴼᶠ ᴬᴸᴸᵁᴿᴱ💫. ᵞᴼᵁ ᴷᴺᴼᵂ ᵂᴴᴬᵀ; ᵞᴼᵁ ᴬᴿᴱ ᴹᵞ ᵀᴿᵁᴱ ᴸᴼᵛᴱ ᴵᴺ ᴸᴵᶠᴱ🌺. ᴬᴸᴸ ᵀᴴᴱ ᵀᴵᴹᴱˢ ˢᴾᴱᴺᵀ ᵂᴵᵀᴴ ᵞᴼᵁ, ᴬᴸᴸ ᵀᴴᴱ ᵂᴼᴺᴰᴱᴿᶠᵁᴸ ᴬᴺᴰ ᴺᴱᵂ ᴹᴼᴹᴱᴺᵀˢ,😍ᴵ ᴰᴼᴺ'ᵀ ᴷᴺᴼᵂ ᴴᴼᵂ ᴵ ᵂᴼᵁᴸᴰ ˢᵁᴿᵛᴵᵛᴱ ᵂᴵᵀᴴᴼᵁᵀ ᵞᴼᵁ. ᴵ ᵂᴬᴺᵀ ᵀᴼ ᶜᴼᴺᶠᴱˢˢ ˢᴼᴹᴱᵀᴴᴵᴺᴳ ᵀᴼ ᵞᴼᵁ ᵀᴼᴰᴬᵞ; ᴵ ᴸᴼᵛᴱ ᵀᴴᴱ ᶠᴱᴱᴸᴵᴺᴳ ᴼᶠ ᴮᴱᴵᴺᴳ ᴵᴺ ᴸᴼᵛᴱ ᵂᴵᵀᴴ ᵞᴼᵁ💜 ᴵ ᵂᴬᴺᵀ ᵀᴼ ᴸᴼᵛᴱ ᵞᴼᵁ ᶠᴼᴿᴱᵛᴱᴿ ᴬᴺᴰ ᵀᴵᴸᴸ ᵀᴴᴱ ᴱᴺᴰ ᴼᶠ ᵀᴵᴹᴱ.😊 ᴵ ᴬᴹ ᵀᴴᴬᴺᴷᶠᵁᴸ ᵀᴼ ᵞᴼᵁ ᴮᴱᶜᴬᵁˢᴱ ᵞᴼᵁ ᶜᴬᴹᴱ ᴵᴺᵀᴼ ᴹᵞ ᴸᴵᶠᴱ, ᴬᴺᴰ ᴺᴼᵂ ᵞᴼᵁ ᴬᴿᴱ ᴹᴵᴺᴱ ✨ ᴺᴼᵂ ᵞᴼᵁ ᴬᴿᴱ ᴹᴵᴺᴱ ✨</p>          
+            <p>𝑴𝒆𝒍𝒍𝒊𝒊 𝑷𝒂𝒈𝒍𝒖𝒖𝒖𝑼𝒖𝒖𝒖𝒖𝒉💙</p>
+            <p>😍❤️💖🥰میں آپکا کبوتر، آپکا پیارا سا بچہ، آپکا جن بھوت، آپکا کھسم</p>
+            <p>👑🥀🌙🌸🤍💕❤️🦋💜🎀💝😍💖🥰میری پیاری گڑیا</p>
+            <p>Love You SooOooo Much Meri Wifey G, Meri Jaan, Meri Zindagi, Meri Choti Si Dunya 👑🥀🌙🌸🤍💕❤️🦋💜🎀💝😍💖🥰 Love You SooOooo Much Shonaaa Forever & Always 🌸💝🧸</p>
+            <p>𝑴𝒆𝒍𝒍𝒊𝒊 𝑩𝒆𝒈𝒖𝒎 𝑺𝒂𝒉𝒊𝒃𝒂 👑🎀🌸🤍😍🥰💋😘</p>
+            <p>𝑴𝒆𝒍𝒍𝒊𝒊 𝑪𝒖𝒕𝒆 𝑺𝒉𝒊 𝑩𝒉𝒂𝑳𝑼𝒖𝒖 👑🎀😚♥️💋😘 𝒀𝒐𝒖 𝑨𝒓𝒆 𝑵𝒐𝒕 𝑱𝒖𝒔𝒕 𝑨 𝑪𝒉𝒂𝒑𝒕𝒆𝒓, 𝒀𝒐𝒖 𝑨𝒓𝒆 𝑴𝒚 𝑬𝒏𝒕𝒊𝒓𝒆 𝑩𝒐𝒐𝒌, 𝑻𝒉𝒆 𝑶𝒏𝒍𝒚 𝑶𝒏𝒆 𝑰 𝑹𝒆𝒓𝒆𝒂𝒅.📖❤️🌼💗 𝑻𝒉𝒂𝒏𝒌 𝑼 𝑺𝒐𝒐𝑶𝒐𝒐 𝑴𝒖𝒄𝒉 𝑭𝒐𝒓 𝑩𝒆𝒊𝒏𝒈 𝑴𝒊𝒏𝒆 𝑭𝒐𝒓𝒆𝒗𝒆𝒓 🥀🌙🌸🤍🦋🎀😍🥰</p>
+            <p>𝑰𝑳𝒀𝑺𝑴 𝑴𝒆𝒓𝒂 𝑩𝒂𝒄𝒉𝒂𝒂𝒂 💋♥️🌼😘</p>
+
+            <div class="signature">🌸From Your Jind Bhoot😚💋😘</div>
+        
+            <div class="social-share">
+                <div class="social-icon" onclick="shareOnSocial('facebook')" title="Share on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="social-icon" onclick="shareOnSocial('twitter')" title="Share on Twitter">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div class="social-icon" onclick="shareOnSocial('whatsapp')" title="Share on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>
